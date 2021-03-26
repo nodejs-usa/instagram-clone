@@ -1,7 +1,10 @@
+const { request } = require("express")
 
 
 module.exports = {
+
     async store( request, response ) {
-        response.json({  message: "Desde controller" })
+        const { name, email, username, password } = request.body;
+        response.json({name});
     }
 }
